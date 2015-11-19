@@ -1,0 +1,183 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#map {
+  height: 200px;
+  margin:0;
+  padding: 0;
+  width: 100%;
+  }
+
+.image {
+  box-sizing: border-box;
+  border: 2px solid pink;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+  }
+.info {
+  display: inline-block;
+  color:#fff;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 1.2;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  vertical-align: center;
+}  
+
+.proj-title {
+  font-weight: 100;
+}
+
+.table {
+margin-top: 40px;
+}
+
+.modal-content{
+   height:600px;
+    width: 600px;
+    padding-left: -200px;
+}
+
+.modal-content iframe {
+   height:500px;
+    width: 500px;
+    padding: 10px;
+}
+
+.learn-more {
+  text-align: left;
+  float: left;
+  margin-top: 10px 
+}
+
+.row button {
+  float: right;
+  margin-bottom: 30px;
+}
+
+#contact{
+    background-image: url("../img/background.jpeg");
+/*Add a background image*/
+    background-attachment: fixed;
+/*Give the background a fixed position does it not scroll when you scroll*/
+    background-size: cover;
+/*Have the background cover the entire div section*/
+    color: black;
+/*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
+    padding:50px;
+    padding-top: 50px;
+    height: 600px;
+    width: 60%;
+}
+
+.footer {
+  padding-bottom: 5em;
+}
+
+.copyright { 
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 50px; 
+
+}
+.fb_iframe_widget { 
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 600px;
+}
+.twitter  { 
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.video {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 560px;
+    max-height: 315px;
+    margin-left: 20%;
+    padding-top: 40px;
+}
+
+.header {
+padding-top: 80px;
+}
+
+.projectName {
+  text-transform: uppercase;
+}
+
+.projectName a{
+  color: white;
+}
+
+.img-responsive {
+  display : block;
+  max-width: 100%;
+  height: auto;
+}
+
+.table-list {
+  margin-top: 80px;
+}
+
+.subintro {
+  display: inline-block;
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 0 40px 0 0px;  
+}
+
+.intro {
+    display: inline-block;
+    float: right;  
+    width: 30%;
+    padding: 0 0 0 40px;    
+  }
+
+.faq {
+  padding-top: 50px;
+  text-align: center;
+  }
+
+.faq button{
+  margin-top: 40px;
+  }
+
+.online img {
+  position: relative;
+  border: 1px solid black;
+  width: 30px;
+  }
+
+.image_about img {
+  position: relative;
+  border: 5px solid black;
+  max-width: 150px;
+  height: auto;
+  }
+.image_about {
+  display: inline-block;
+  }
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+  }
+.container {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  }

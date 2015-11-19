@@ -1,0 +1,51 @@
+<div class="container" id="contact">
+      <div class="row">
+        <div class="col-md-6" id="form_contact">
+          <!--<iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJKZgktE2Gj4AREGGWW-QWAHY&key=AIzaSyAEARuD9tnygqhuiCmDJsXFs8Ox2JqQH9w" allowfullscreen></iframe>-->
+          <div id="map"></div>
+
+          <h2>Contact</h2>
+          <div class="address">
+            <p>3462 Maple Avenue Oakland CA 94602</p>
+          </div>
+          <div class="email">
+            <h3>EMAIL</h3>
+            
+                <p><span class="glyphicon glyphicon-envelope"> </span> asrizal.st@gmail.com</p>
+                <p><span class="glyphicon glyphicon-envelope"> </span> ijang_172@yahoo.com</p>
+              
+          </div>
+          <div class="phone">
+            <h3>PHONE NUMBER</h3>
+                <p><span class="glyphicon glyphicon-phone"></span> +1 415 425 3212</p>
+          </div>
+         
+          
+        </div>
+
+        <div class="col-md-6" id="form_contact">    
+        
+          <h2>Say Hello</h2>
+        
+          <form action="/login" method="post" name="login">
+          
+            <div class="form-group">
+              <label for="exampleInputName1">Your Name</label>
+              <input type="name" class="form-control" id="exampleInputName1" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email addres</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" required="required">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputMassage">Your Massage</label>
+              <textarea cols="28" rows="5" placeholder="Write your message here" class="message-box" maxlength="200" required="required"></textarea>
+              <p id="char-count"></p>
+              <p id="visible-comment"></p>
+            </div>
+            <button type="submit" class="btn btn-primary" id="form-submit">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
