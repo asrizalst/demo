@@ -39,16 +39,16 @@
                 <span class="icon-bar"></span>
               </button>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#faq">FAQs</a></li>
-                  <li><a href="#work">Work</a></li>
+                  <li><%= link_to 'Home', root_path %></li>
+                  <li><%= link_to 'About', static_pages_about_path %></li>
+                  <li><%= link_to 'Contact', static_pages_contact_path %></li>
                 </ul>
           </div> <!-- nav -->
       </div> <!-- end nav container-->
     </nav> <!-- end navbar-->
 
+
+<%= yield %>
 <!-- Footer-->
     <!-- you tube-->
     <div class="container" id="footer">
@@ -78,7 +78,5 @@
 
       </footer>
     </div>
-<%= yield %>
-
 </body>
 </html>
