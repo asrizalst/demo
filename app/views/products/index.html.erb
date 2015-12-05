@@ -1,6 +1,7 @@
 <div class="container" id="product">
+  <%= link_to 'New Product', new_product_path %>
   <p id="notice"><%= notice %></p>
-
+  
   <h1>Listing Products</h1>
   <div class="table-responsive" >
       <table class="table">
@@ -17,13 +18,13 @@
 
         <tbody>
           <% @products.each do |product| %>
-            <%= render @products %>
+            <%= render product %>
           <% end %>
         </tbody>
       </table>
     </div>
   </div>
-  <%= link_to 'New Product', new_product_path %>
+  
 </div>
 <br>
 
