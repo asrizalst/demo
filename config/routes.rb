@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
+  get 'usermailer/contact_form'
+
+  get 'static_pages/thank_you'
+
   get 'static_pages/landing_page'
 
   get 'static_pages/index'
@@ -24,6 +30,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
+  get 'products/:id', to: 'products#show'
+
+  post 'static_pages/thank_you'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -52,12 +61,12 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
+  resources :products do
+    resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end
-  #   end
+  end
 
   # Example resource route with concerns:
   #   concern :toggleable do

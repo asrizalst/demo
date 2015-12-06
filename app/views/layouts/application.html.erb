@@ -1,3 +1,4 @@
+<%= flash[:notice] %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,15 @@
         <div class="projectName navbar-brand pull-left">
         <%= link_to 'PROJECT DEMO', root_path %>
         </div> <!--end projectName -->
-
+        <form class="navbar-form navbar-right" role="search">
+          <div class="input-group">
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("search") %>
+            <% end %>
+          </div>
+        </form>
           <div class="navbar-header pull-right"> 
       
              <!--  </div> <!--end navbar-header -->
@@ -43,20 +52,27 @@
                   <li><%= link_to 'About', static_pages_about_path %></li>
                   <li><%= link_to 'Contact', static_pages_contact_path %></li>
                   <li><%= link_to 'Products', products_path %></li>
+                  <li>
+                    <% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                    <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                    <% end %>
+                  </li>
                 </ul>
           </div> <!-- nav -->
       </div> <!-- end nav container-->
     </nav> <!-- end navbar-->
 
-
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
 <%= yield %>
 <!-- Footer-->
     <!-- you tube-->
     <div class="container" id="footer">
       <footer>
-          
 
-     
         <div class="footer">
           <div class="copyright">
             <h6>Asrizal. 2015</h6>
