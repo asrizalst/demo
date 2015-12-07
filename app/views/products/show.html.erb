@@ -1,45 +1,48 @@
 <div class="container" id="show">
-
-
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-  </p>
-  <%= image_tag(@product.image_url, style: "width: 250px", class: "img-zoom", data_zoom_image: @product.image_url) %>
-
-    <strong>Color:</strong>
-    <%= @product.color %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
-  
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-4"><%= render 'comments/new_comment' %></div>
-    
-  </div>
-</div>
-<hr>
-
-<div class="col-md-4"><%= render 'comments/comment_reviews' %></div>  
-
-  <%= link_to 'Edit', edit_product_path(@product) %> 
+  <%= link_to 'Edit', edit_product_path(@product) %>
 
   <%= link_to 'Back', products_path %>
 
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag(@product.image_url, style: "width: 250px", class: "img-zoom", data_zoom_image: @product.image_url) %>
+    </div>
+    <div class="col-md-8">
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+      
+      <p>
+        <strong>Image url:</strong>
+      </p>
+      <p>
+      <strong>Color:</strong>
+        <%= @product.color %>
+      </p>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
+      <p>Average Rating: 
+        <div class="rated" data-score="<%= @product.average_rating %>">
+        </div> 
+      </p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <%= render 'comments/new_comment' %>
+  </div>
+  <div class="col-md-6">
+    <%= will_paginate @comments %>
+    <%= render 'comments/comment_reviews' %>
+  </div>  
+  </div>
+<hr>
 
   
 </div>

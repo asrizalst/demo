@@ -14,4 +14,8 @@ class Product < ActiveRecord::Base
   	
   	validates :rating, numericality: { only_integer: true }
 
+  	def average_rating
+    	comments.average(:rating).to_f
+  	end
+
 end
