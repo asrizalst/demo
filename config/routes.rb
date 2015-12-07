@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
+  get 'comments/_comment_reviews'
+
+  get 'comments/_new_comment'
+
+  get 'products/_new_comment'
+
   devise_for :users
+
   resources :users
+  resources :products do
+    resources :comments
+  end
+ 
   get 'usermailer/contact_form'
 
   get 'static_pages/thank_you'
@@ -15,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
-  resources :products
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -61,12 +72,10 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with more complex sub-resources:
-  resources :products do
-    resources :comments
+ 
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end
-  end
 
   # Example resource route with concerns:
   #   concern :toggleable do
