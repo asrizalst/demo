@@ -38,6 +38,8 @@ Rails.application.routes.draw do
   get 'products/:id', to: 'products#show'
 
   post 'static_pages/thank_you'
+
+  resources :articles, only: [:index, :preview, :create, :destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

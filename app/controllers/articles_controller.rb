@@ -1,19 +1,17 @@
-class OrdersController < ApplicationController
+class ArticlesController < ApplicationController
  
 	def index
 	end
 
-	def preview
+	def show
 	end
 
 	def new
 	end
 
-
   def create
   end
 
-  
   def update  
   end
 
