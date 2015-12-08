@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :widgets
   get 'comments/_comment_reviews'
 
   get 'comments/_new_comment'
