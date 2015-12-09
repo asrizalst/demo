@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'products/_new_comment'
 
-  devise_for :users
+  devise_for :users, controller: {registration: "registrations"}
 
   resources :users
   resources :products do
@@ -40,6 +40,11 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
   resources :articles, only: [:index, :preview, :create, :destroy]
+  
+  post "/payments/create"
+
+  resources :payments
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
