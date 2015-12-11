@@ -39,7 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.4'
-
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
@@ -48,7 +48,16 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #guard automate debuging
+  gem 'guard-rspec', require: false
+
+  gem 'guard-spork'
+
+  gem 'brakeman', :require => false
+
 end
+
 
 group :production do 
   gem 'rails_12factor'
@@ -66,5 +75,20 @@ gem 'stripe'
 gem 'elevatezoom-rails'
 
 gem 'chosen-rails'
+
+gem 'angularjs-rails'
+
+gem 'actionpack-page_caching'
+
+gem 'dalli'
+
+gem 'redis-rails'
+
+gem 'spork-rails'
+
+
+
+
+
 
 
