@@ -11,29 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<form>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :image_url %><br>
+      <%= f.text_field :image_url %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :color %><br>
+      <%= f.text_field :color %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>  
+
+</form>
 
 <% end %>
-

@@ -1,7 +1,10 @@
 <div class="container" id="product">
 	<h1>New Product</h1>
-
-	<%= render partial: 'form' %>
+	<form>
+		<div class="form-group">
+			<%= render partial: 'form' %>
+		</div>
+	</form>
 
 	<%= link_to 'Back', products_path %>
 
