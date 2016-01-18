@@ -32,7 +32,6 @@ Rails.application.routes.draw do
 
   
 
-  get 'products/:id', to: 'products#show'
 
   post 'static_pages/thank_you'
 

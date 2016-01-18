@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+#ajax code
 def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
