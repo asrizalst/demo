@@ -28,4 +28,15 @@
   padding-top: 10px;
   padding-left: 50px; 
 }
+.input-group label{
+	color: white;
+	display: inline-block;
+}
+.input-group {
+	float: right;
+	display: inline-block;
+}
+.new_product {
+	display: inline-block;
+}
 

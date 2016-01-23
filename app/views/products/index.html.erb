@@ -1,6 +1,15 @@
 <div class="container" id="product">
-  <%= link_to 'New Product', new_product_path %>
-  <p id="notice"><%= notice %></p>
+  <div class="new_product">
+    <%= link_to 'New Product', new_product_path %>
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="input-group">
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("search") %>
+            <% end %>
+          </div>
   
   <h1>Listing Products</h1>
   <div class="table-responsive" >
